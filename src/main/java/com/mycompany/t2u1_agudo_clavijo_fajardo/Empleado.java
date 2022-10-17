@@ -44,7 +44,7 @@ public class Empleado {
     public double calcularImpuestos(int limite1, int limite2,int limite3){
         double retorno = 0;
         double ingresos = this.costoHora*this.horasTrabajadas;
-        if(ingresos>0&&ingresos<=0){
+        if(ingresos>0&&ingresos<=limite1){
             retorno = 0;
         }
         else if(ingresos>limite1&&ingresos<=limite2){
