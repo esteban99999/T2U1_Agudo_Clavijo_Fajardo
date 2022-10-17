@@ -21,9 +21,9 @@ public class T2U1_Agudo_Clavijo_Fajardo {
         Empleado1.costoHora=10;
         Empleado1.yearIngreso=2022;
         
-        System.out.println(Empleado1.mostrarInfo()+" Y su ingreso mensual sera: "+Empleado1.calculoIngresos()+"$");
+        System.out.println(Empleado1.mostrarInfo()+" Y su ingreso mensual sera: "+Empleado1.calculoIngresos(2022)+"$");
         System.out.println("El bono por sus horas extras es de: "+Empleado1.bonoHorasExtra()+"$");
-        System.out.println("El impuesto de ingreso por su ingreso basico es: "+Empleado1.calcularImpuestos()+"$");
+        System.out.println("El impuesto de ingreso por su ingreso basico es: "+Empleado1.calcularImpuestos(1000,2000,3000)+"$");
         System.out.println("Estimado: "+Empleado1.nombre+" Su ingreso total mensual fuera de impuestos es: "+Empleado1.calcularTotal()+"$");
         
         Empleado Empleado2 = new Empleado();
@@ -33,9 +33,9 @@ public class T2U1_Agudo_Clavijo_Fajardo {
         Empleado2.costoHora=8.5;
         Empleado2.yearIngreso=2015;
         
-        System.out.println(Empleado2.mostrarInfo()+" Y su ingreso mensual sera: "+Empleado2.calculoIngresos()+"$");
+        System.out.println(Empleado2.mostrarInfo()+" Y su ingreso mensual sera: "+Empleado2.calculoIngresos(2022)+"$");
         System.out.println("El bono por sus horas extras es de: "+Empleado2.bonoHorasExtra()+"$");
-        System.out.println("El impuesto de ingreso por su ingreso basico es: "+Empleado2.calcularImpuestos()+"$");
+        System.out.println("El impuesto de ingreso por su ingreso basico es: "+Empleado2.calcularImpuestos(1000,2000,3000)+"$");
         System.out.println("Estimado: "+Empleado2.nombre+" Su ingreso total mensual fuera de impuestos es: "+Empleado2.calcularTotal()+"$");
         
         Empleado Empleado3 = new Empleado();
@@ -45,9 +45,9 @@ public class T2U1_Agudo_Clavijo_Fajardo {
         Empleado3.costoHora=11;
         Empleado3.yearIngreso=2010;
         
-        System.out.println(Empleado3.mostrarInfo()+" Y su ingreso mensual sera: "+Empleado3.calculoIngresos()+"$");
+        System.out.println(Empleado3.mostrarInfo()+" Y su ingreso mensual sera: "+Empleado3.calculoIngresos(2022)+"$");
         System.out.println("El bono por sus horas extras es de: "+Empleado3.bonoHorasExtra()+"$");
-        System.out.println("El impuesto de ingreso por su ingreso basico es: "+Empleado3.calcularImpuestos()+"$");
+        System.out.println("El impuesto de ingreso por su ingreso basico es: "+Empleado3.calcularImpuestos(1000,2000,3000)+"$");
         System.out.println("Estimado: "+Empleado3.nombre+" Su ingreso total mensual fuera de impuestos es: "+Empleado3.calcularTotal()+"$");
     }
 }

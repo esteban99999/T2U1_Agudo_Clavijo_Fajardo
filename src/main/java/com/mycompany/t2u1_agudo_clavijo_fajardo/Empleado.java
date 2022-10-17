@@ -22,11 +22,11 @@ public class Empleado {
      
         return retorno;
     }
-    public double calculoIngresos(){
+    public double calculoIngresos(int yearActual){
         double retorno = 0;
         int añosTrabajados = 0;
         double porcentajeAños = 0;
-        añosTrabajados = 2022-this.yearIngreso;
+        añosTrabajados = yearActual-this.yearIngreso;
         porcentajeAños = añosTrabajados*0.02;
         retorno = (this.costoHora*this.horasTrabajadas)+((this.costoHora*this.horasTrabajadas)*porcentajeAños);
     
@@ -41,19 +41,19 @@ public class Empleado {
         }
         return retorno;
     }
-    public double calcularImpuestos(){
+    public double calcularImpuestos(int limite1, int limite2,int limite3){
         double retorno = 0;
         double ingresos = this.costoHora*this.horasTrabajadas;
         if(ingresos>0&&ingresos<=0){
             retorno = 0;
         }
-        else if(ingresos>1000&&ingresos<=2000){
+        else if(ingresos>limite1&&ingresos<=limite2){
             retorno = ingresos*0.05;
         }
-        else if(ingresos>2000&&ingresos<=3000){
+        else if(ingresos>limite2&&ingresos<=limite3){
             retorno = ingresos*0.12;
         }
-        else if(ingresos>3000){
+        else if(ingresos>limite3){
             retorno = ingresos*0.25;
         }
         return retorno;
