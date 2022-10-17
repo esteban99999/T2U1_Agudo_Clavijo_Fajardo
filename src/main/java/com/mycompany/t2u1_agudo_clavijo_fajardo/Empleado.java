@@ -58,27 +58,23 @@ public class Empleado {
         }
         return retorno;
     }
-    public double calcularTotal(){
+    public double calcularTotal(int limite1, int limite2,int limite3){
         int horaExtras = 0;
         double retorno = 0;
         double impuestos = 0;
         double bono = 0;
         double ingresos = this.costoHora*this.horasTrabajadas;
-        if(ingresos>0&&ingresos<=0){
-            impuestos = 0;
+        if(ingresos>0&&ingresos<=limite1){
+            retorno = 0;
         }
-        else if(ingresos>1000&&ingresos<=2000){
-            impuestos = ingresos*0.05;
+        else if(ingresos>limite1&&ingresos<=limite2){
+            retorno = ingresos*0.05;
         }
-        else if(ingresos>2000&&ingresos<=3000){
-            impuestos = ingresos*0.12;
+        else if(ingresos>limite2&&ingresos<=limite3){
+            retorno = ingresos*0.12;
         }
-        else if(ingresos>3000){
-            impuestos = ingresos*0.25;
-        }
-        if(this.horasTrabajadas>160){
-            horaExtras = (this.horasTrabajadas-160);
-            bono = ((horaExtras*2)*this.costoHora);
+        else if(ingresos>limite3){
+            retorno = ingresos*0.25;
         }
         retorno = ((bono+ingresos)-impuestos);
         return retorno;
